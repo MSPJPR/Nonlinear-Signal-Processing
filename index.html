@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonlinear Signal Processing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Nonlinear Signal Processing</h1>
+
+    <h2>Image Noise Reduction</h2>
+    <input type="file" id="imageInput" accept="image/*">
+    <canvas id="imageCanvas"></canvas>
+    <button onclick="applyAdaptiveMedianFilter()">Apply Adaptive Median Filter</button>
+    <button onclick="applyRankOrderFilter()">Apply Rank-Order Filter</button>
+    <button id="downloadImage">Download Filtered Image</button>
+
+    <h2>Real-Time Webcam Filtering</h2>
+    <video id="webcam" autoplay></video>
+    <canvas id="webcamCanvas"></canvas>
+    <button onclick="applyWebcamFilter()">Apply Webcam Filter</button>
+
+    <h2>Speech Noise Reduction</h2>
+    <input type="file" id="audioInput" accept="audio/*">
+    <audio id="audioPlayer" controls></audio>
+    <button onclick="applyAdaptiveWienerFilter()">Apply Wiener Filter</button>
+    <button onclick="applyDecisionDirectedFilter()">Apply Decision-Directed Filter</button>
+    <button id="downloadAudio">Download Filtered Audio</button>
+
+    <h2>Real-Time Audio Recording & Filtering</h2>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <audio id="recordedAudio" controls></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
